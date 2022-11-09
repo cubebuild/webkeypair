@@ -28,6 +28,8 @@
 		"@types/node": "^18.7.17"
 	},
 	"dependencies": {
-		"cbor-x": "^1.4.1"
+		"@noble/secp256k1": "^1.7.0",
+		"cbor-x": "^1.4.1",
+		"pino": "^8.7.0"
 	}
 }
