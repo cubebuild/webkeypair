@@ -40,6 +40,12 @@ export async function publicKeyToAddress(publicKey: Uint8Array): Promise<string>
 	return address;
 }
 
+export function isValidAddress(address: string): boolean {
+	const start = address.startsWith(ADDRESS_PREFIX);
+	const length = address.length === 44;
+	return start && length;
+}
+
 /**
  * Encodes an object into a CBOR byte array as signs it with the private key.
  * The signature is a Schnorr signature.
